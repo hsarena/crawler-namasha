@@ -15,6 +15,15 @@ SPIDER_MODULES = ['namasha.spiders']
 NEWSPIDER_MODULE = 'namasha.spiders'
 
 
+CONNECTION_STRING = "{drivername}://{user}:{passwd}@{host}:{port}/{db_name}?charset=utf8".format(
+    drivername="mysql+pymysql",
+    user="root",
+    passwd="jjkli8jlkj",
+    host="localhost",
+    port="3306",
+    db_name="namasha",
+)
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'namasha (+http://www.yourdomain.com)'
 
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'namasha.pipelines.NamashaPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'namasha.pipelines.NamashaPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
