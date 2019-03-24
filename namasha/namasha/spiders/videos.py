@@ -25,7 +25,7 @@ class VideosSpider(scrapy.Spider):
             item = NamashaItem()
             item['category'] = category
             item['title'] = video.xpath('div/a/text()').get()
-            item['link'] = videos.xpath('div/a/@href').get()
+            item['link'] = video.xpath('div/a/@href').get()
             items.append(item)
         print(items)
         return items
