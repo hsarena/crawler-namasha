@@ -6,9 +6,9 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.item import Item, Field
 
-
-class NamashaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class NamashaItem(Item):
+    category = Field()
+    title = Field()
+    link = Field()
