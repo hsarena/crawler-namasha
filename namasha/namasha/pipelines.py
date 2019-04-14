@@ -19,6 +19,11 @@ class NamashaPipeline(object):
         namashadb.category = item['category']
         namashadb.title = item['title']
         namashadb.link = item['link']
+        namashadb.date_added = item['date_added']
+        namashadb.publisher = item['publisher']
+        namashadb.publisher_logo = item['publisher_logo']
+        namashadb.description = item['description']
+        namashadb.view_count = item['view_count']
 
         try:
             session.add(namashadb)

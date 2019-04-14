@@ -12,3 +12,8 @@ class NamashaItem(Item):
     category = Field()
     title = Field()
     link = Field()
+    date_added = Field()
+    publisher = Field()
+    publisher_logo = Field()
+    description = Field()
+    view_count = Field()

@@ -24,5 +24,10 @@ class NamashaDB(DeclarativeBase):
     category = Column('category', String(100))
     title = Column('title', String(250), unique=True)
     link = Column('link', String(100))
+    date_added = Column('date_added', String(100))
+    publisher = Column('publisher', String(50))
+    publisher_logo = Column('publisher', String(70))
+    view_count = Column('view_count', String(30))
+    description = Column('description', Text())
 
 
